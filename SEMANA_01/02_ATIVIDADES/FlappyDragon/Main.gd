@@ -1,9 +1,9 @@
 extends Node # instancia a classe Node2D
 
-var status = 1
-var vscore = 0
-var x = 1.5 
-var y = 1.5 
+var status = 1 #Variável que define o status do jogo, se o mesmo está parado ou rodando.
+var vscore = 0 #Variável que define a pontuação do jogo.
+var x = 2.75 #Variável que determina a velocidade do objeto(cenário) horizontalmente.
+var y = 1.75 #Variável que determina a velocidade de queda do objeto(dragão). Puxa o dragão para baixo.
 
 # executa essa função ao carregar o jogo
 func _ready():
@@ -32,7 +32,7 @@ func _process(delta):
 
 		# se bateu no fundo, não desce mais e termina o jogo
 		if $dragon.position.y > 480:
-			$dragon.position.y = 480
+			$dragon.position.y = 0
 			status = 0 # muda o status para "parado"
 
 		# se bateu no teto, não sobe mais
@@ -41,11 +41,11 @@ func _process(delta):
 			
 		# se apertou seta para baixo, aumenta o valor de y (posição vertical) do dragão
 		if Input.is_action_pressed("ui_down"):
-			$dragon.position.y += 2
+			$dragon.position.y += 4
 
 		# se apertou seta para cima, diminui o valor de y (posição vertical) do dragão
 		if Input.is_action_pressed("ui_up"):
-			$dragon.position.y -= 4
+			$dragon.position.y -= 6
 			
 	elif status == 0: # parado
 		
