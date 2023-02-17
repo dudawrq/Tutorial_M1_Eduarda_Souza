@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Node2D.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TextoUsuarioEditor" type="LineEdit" parent="."]
+margin_left = 324.0
+margin_top = 401.0
+margin_right = 652.0
+margin_bottom = 465.0
+
+[node name="InstrucaoLabel" type="Label" parent="."]
+margin_left = 228.0
+margin_top = 20.0
+margin_right = 458.0
+margin_bottom = 36.0
+rect_scale = Vector2( 2.3527, 2.3527 )
+text = "Instrução"
+align = 1
+valign = 1
+
+[node name="InfoLabel" type="Label" parent="."]
+margin_left = 225.0
+margin_top = 51.0
+margin_right = 455.0
+margin_bottom = 67.0
+rect_scale = Vector2( 2.3527, 2.3527 )
+text = "Lista"
+align = 1
+valign = 1
+
+[node name="ResultadoDadosLabel" type="Label" parent="."]
+margin_left = 267.0
+margin_top = 82.0
+margin_right = 471.0
+margin_bottom = 98.0
+rect_scale = Vector2( 2.29745, 2.29745 )
+align = 1
+valign = 1
+
+[node name="ListaProntaBotao" type="Button" parent="."]
+margin_left = 523.0
+margin_top = 217.0
+margin_right = 667.0
+margin_bottom = 268.0
+text = "Lista pronta"
+
+[node name="ExibirInfoBotao" type="Button" parent="."]
+margin_left = 343.0
+margin_top = 217.0
+margin_right = 498.0
+margin_bottom = 268.0
+text = "Exibir Instrução"
+
+[node name="EnviarListaBotao" type="Button" parent="."]
+margin_left = 673.0
+margin_top = 407.0
+margin_right = 755.0
+margin_bottom = 463.0
+text = "Enviar Lista"
+
+[node name="EnviarDadosBotao" type="Button" parent="."]
+margin_left = 786.0
+margin_top = 408.0
+margin_right = 870.0
+margin_bottom = 464.0
+text = "Enviar Dados"
+
+[connection signal="pressed" from="ListaProntaBotao" to="." method="_on_ListaProntaBotao_pressed"]
+[connection signal="pressed" from="ExibirInfoBotao" to="." method="_on_ExibirInfoBotao_pressed"]
+[connection signal="pressed" from="EnviarListaBotao" to="." method="_on_EnviarListaBotao_pressed"]
+[connection signal="pressed" from="EnviarDadosBotao" to="." method="_on_EnviarDadosBotao_pressed"]
