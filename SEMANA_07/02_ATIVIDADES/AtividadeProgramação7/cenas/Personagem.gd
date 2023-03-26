@@ -26,6 +26,7 @@ func jump(): #Controla a movimentação do eixo y
 	if Input.is_action_pressed("jump") and jump_count < 1:
 		velocity.y = jump_force
 		jump_count += 1
+		$jump.playing = true
 		
 	if is_on_floor():
 		jump_count = 0

@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://personagem/AnimationSheet_Character.png" type="Texture" id=1]
 [ext_resource path="res://cenas/Personagem.gd" type="Script" id=2]
+[ext_resource path="res://sounds/jump.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=27]
 extents = Vector2( 20.3445, 41.4995 )
@@ -117,7 +118,7 @@ position = Vector2( -1, -50 )
 scale = Vector2( 3.47917, 3.47917 )
 frames = SubResource( 6 )
 animation = "Parado"
-frame = 3
+frame = 6
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -134,3 +135,7 @@ drag_margin_top = 0.43
 drag_margin_right = 0.5
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 7.866
